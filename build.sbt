@@ -20,6 +20,15 @@ lazy val httpserver = (project in file("httpserver"))
     )
   ).dependsOn(blocks)
 
+lazy val restService = (project in file("rest-service"))
+  .settings(commonSettings: _*)
+  .settings(
+    version := "0.1.0",
+    libraryDependencies ++= Seq(
+
+    )
+  ).dependsOn(blocks)
+
 lazy val commonSettings: Seq[Setting[_]] = Seq(
   name <<= name("explore-" + _),
   scalaVersion := scalaV,
