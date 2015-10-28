@@ -1,15 +1,18 @@
+import src.main.scala.common.CommonProj
+
 name := "explore-sbt"
 
 lazy val scalaV = "2.11.7"
 
-lazy val blocks = (project in file("blocks"))
+val gitHeadCommitSha = taskKey[String]("Determines cthe current git commit SHA") //example of a definition
+
+lazy val blocks = Project("blocks-proj", file("blocks"))
   .settings(commonSettings: _*)
   .settings(
     version := "0.1.0",
-    libraryDependencies ++= Seq(
-
-    )
+    gitHeadCommitSha := CommonProj.fn() // //example of a definition
   )
+
 
 lazy val httpserver = (project in file("httpserver"))
   .settings(commonSettings: _*)

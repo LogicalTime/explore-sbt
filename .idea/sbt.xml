@@ -5,7 +5,19 @@
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="sbtVersion" value="0.13.5" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/blocks" />
+            <option value="$PROJECT_DIR$/blocks/project" />
+            <option value="$PROJECT_DIR$/httpserver" />
+            <option value="$PROJECT_DIR$/httpserver/project" />
+            <option value="$PROJECT_DIR$/project" />
+            <option value="$PROJECT_DIR$/rest-service" />
+            <option value="$PROJECT_DIR$/rest-service/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="0.13.9" />
         <option name="useAutoImport" value="true" />
         <option name="useOurOwnAutoImport" value="true" />
       </SbtProjectSettings>
